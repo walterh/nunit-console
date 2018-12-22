@@ -50,7 +50,7 @@ namespace NUnit.Engine.Runners.Tests
 #if !NETCOREAPP1_1
             _services.Add(new Services.ExtensionService());
             _services.Add(new Services.ProjectService());
-#if !NETCOREAPP2_0
+#if !NETCOREAPP2_1
             _services.Add(new Services.DomainManager());
             _services.Add(new Services.RuntimeFrameworkService());
 #endif
