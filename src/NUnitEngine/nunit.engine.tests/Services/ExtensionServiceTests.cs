@@ -157,8 +157,8 @@ namespace NUnit.Engine.Services.Tests
             Assume.That(Assembly.GetEntryAssembly(), Is.Not.Null, "Entry assembly is null, framework loading validation will be skipped.");
 
 #if NETCOREAPP2_0
-            string other = "net35"; // Attempt to load the .NET 3.5 version of the extensions from the .NET Core 2.0 tests
-#elif NET35
+            string other = "net471"; // Attempt to load the .NET 3.5 version of the extensions from the .NET Core 2.0 tests
+#elif NET471
             string other = "netcoreapp2.0"; // Attempt to load the .NET Core 2.0 version of the extensions from the .NET 3.5 tests
 #endif
             var assemblyName = Path.Combine(GetSiblingDirectory(other), "nunit.engine.tests.dll");
@@ -233,7 +233,7 @@ namespace NUnit.Engine.Services.Tests
 
             var extNetStandard = new ExtensionAssembly(netstandard.Location, false);
             var extNetCore = new ExtensionAssembly(netcore.Location, false);
-            var extNetFramework = new ExtensionAssembly(Path.Combine(GetSiblingDirectory("net35"), "nunit.engine.dll"), false);
+            var extNetFramework = new ExtensionAssembly(Path.Combine(GetSiblingDirectory("net471"), "nunit.engine.dll"), false);
 
             yield return new TestCaseData(new FrameworkCombo(netstandard, extNetStandard)).SetName("InvalidCombo(.NET Standard, .NET Standard)");
             yield return new TestCaseData(new FrameworkCombo(netstandard, extNetCore)).SetName("InvalidCombo(.NET Standard, .NET Core)");

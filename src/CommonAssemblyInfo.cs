@@ -31,7 +31,7 @@ using System.Reflection;
 [assembly: AssemblyCopyright("Copyright (c) 2018 Charlie Poole, Rob Prouse")]
 
 #if DEBUG
-#if NET35
+#if NET471
 [assembly: AssemblyConfiguration(".NET 3.5 Debug")]
 #elif NET20
 [assembly: AssemblyConfiguration(".NET 2.0 Debug")]
@@ -43,7 +43,7 @@ using System.Reflection;
 [assembly: AssemblyConfiguration("Debug")]
 #endif
 #else
-#if NET35
+#if NET471
 [assembly: AssemblyConfiguration(".NET 3.5")]
 #elif NET20
 [assembly: AssemblyConfiguration(".NET 2.0")]

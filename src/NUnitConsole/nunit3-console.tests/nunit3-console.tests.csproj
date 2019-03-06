@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>NUnit.ConsoleRunner.Tests</RootNamespace>
     <AssemblyName>nunit3-console.tests</AssemblyName>
-    <TargetFrameworks>net35</TargetFrameworks>
+    <TargetFrameworks>net471</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

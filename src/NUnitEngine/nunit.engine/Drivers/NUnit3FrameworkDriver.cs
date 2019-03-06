@@ -171,8 +171,9 @@ namespace NUnit.Engine.Drivers
                 return _testDomain.CreateInstanceAndUnwrap(
                     _reference.FullName, typeName, false, 0,
 #if !NET_4_0
-                    null, args, null, null, null);
+                    null, args, null, null);
 #else
+    // walterh
                 null, args, null, null );
 #endif
             }

@@ -1,4 +1,4 @@
-﻿#if !NET35
+﻿#if !NET471
 using System.Reflection;
 using NUnitLite;
 

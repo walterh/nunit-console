@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>nunit.agent</RootNamespace>
     <AssemblyName>nunit-agent-x86</AssemblyName>
-    <TargetFrameworks>net20</TargetFrameworks>
+    <TargetFrameworks>net471</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -13,7 +13,7 @@
     <IntermediateOutputPath>obj\$(Configuration)\x86\</IntermediateOutputPath>
     <LangVersion>7</LangVersion>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net20'">
+  <ItemGroup Condition="'$(TargetFramework)'=='net471'">
     <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>

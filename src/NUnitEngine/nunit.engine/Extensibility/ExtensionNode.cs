@@ -143,7 +143,8 @@ namespace NUnit.Engine.Extensibility
             }
             return Activator.CreateInstance(typeinfo.AsType(), args);
 #else
-            return AppDomain.CurrentDomain.CreateInstanceFromAndUnwrap(AssemblyPath, TypeName, false, 0, null, args, null, null, null);
+            // walterh
+            return AppDomain.CurrentDomain.CreateInstanceFromAndUnwrap(AssemblyPath, TypeName, false, 0, null, args, null, null);
 #endif
         }
 

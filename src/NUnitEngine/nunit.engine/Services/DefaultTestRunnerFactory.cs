@@ -104,13 +104,23 @@ namespace NUnit.Engine.Services
             {
                 default:
                 case ProcessModel.Default:
+                    // walterh
+                    // https://github.com/nunit/nunit-console/issues/382
+                    // https://github.com/nunit/nunit-console/commit/ee01734adb0942b66f79ba5f3c4d55a85d7713ea?diff=unified#diff-9f6ecbd64f15202ce4fdb0b5d36ae575L87
                     if (projectCount > 0)
                         return new AggregatingTestRunner(ServiceContext, package);
-                    else if (package.SubPackages.Count > 1)
+                    else if (package.SubPackages.Count > 1 || projectCount > 0)
                         return new MultipleTestProcessRunner(this.ServiceContext, package);
                     else
                         return new ProcessRunner(this.ServiceContext, package);
-
+                    /*
+                if (projectCount > 0)
+                    return new AggregatingTestRunner(ServiceContext, package);
+                else if (package.SubPackages.Count > 1)
+                    return new MultipleTestProcessRunner(this.ServiceContext, package);
+                else
+                    return new ProcessRunner(this.ServiceContext, package);
+               */
                 case ProcessModel.Multiple:
                     return new MultipleTestProcessRunner(this.ServiceContext, package);
 
